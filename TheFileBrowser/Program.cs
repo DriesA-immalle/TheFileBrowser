@@ -9,7 +9,26 @@ namespace TheFileBrowser
     {
         static void Main(string[] args)
         {
+            switch (args[0])
+            {
+                case "-f":
+                    Console.Write("Alle files in de huidge directory: ");
+                    break;
+                case "-c":
+                    Console.Write("De huidige directory: ");
+                    break;
+                case "-d":
+                    Console.Write("Alle huidige subdirectories: ");
+                    break;
+                case "-h":
+                    Console.WriteLine("Hulp:");
+                    break;
+                default:
+                    Console.WriteLine("Ongeldig argument! Probeer '-h'");
+                    break;
 
+
+            }
         }
     }
 }
