@@ -2,17 +2,21 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.IO;
 
 namespace TheFileBrowser
 {
     class Program
     {
+        
         static void Main(string[] args)
         {
             if (args.Length == 0)
             {
                 Console.WriteLine("Geef een argument! Probeer '-h'");
-
+            }
+            else
+            {
                 switch (args[0])
                 {
                     case "-f":
@@ -31,16 +35,24 @@ namespace TheFileBrowser
                         Console.WriteLine("Ongeldig argument! Probeer '-h'");
                         break;
                 }
+                
+                
             }
         }
         static void FilesInDirectory()
         {
-            Console.Write("Alle files in de huidige directory: ");
+            Console.WriteLine("Alle files in de huidige directory: ");
+            Console.WriteLine("");
+            string[] dirs = Directory.GetFiles(Environment.CurrentDirectory);
+            foreach (string dir in dirs)
+            {
+                Console.WriteLine(dir);
+            }
         }
 
         static void HuidigeDirectory()
         {
-            Console.Write("De huidige directory: ");
+            Console.Write("De huidige directory: " + Environment.CurrentDirectory);
         }
 
         static void HuidigeSubdirectories()
