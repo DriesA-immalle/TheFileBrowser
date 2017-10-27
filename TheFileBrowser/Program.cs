@@ -65,6 +65,11 @@ namespace TheFileBrowser
         static void Hulp()
         {
             Console.WriteLine("Hulp:");
+            Console.WriteLine("De volgende argumenten zijn mogelijk:");
+            Console.WriteLine("-f toont alle files in de huidige directory.");
+            Console.WriteLine("-c toont de huidige directory.");
+            Console.WriteLine("-d toont alle subdirectories van de huidige directory.");
+            Console.WriteLine("-h toont alle mogelijke arguments.");
         }
     }
 
