@@ -46,10 +46,10 @@ namespace TheFileBrowser
             string[] dirs = Directory.GetFiles(Environment.CurrentDirectory);
             foreach (string dir in dirs)
             {
-                Console.WriteLine(dir);
+                Console.WriteLine(Path.GetFileName(dir));
             }
         }
-
+        
         static void HuidigeDirectory()
         {
             Console.Write("De huidige directory: " + Environment.CurrentDirectory);
@@ -58,6 +58,8 @@ namespace TheFileBrowser
         static void HuidigeSubdirectories()
         {
             Console.Write("Alle huidige subdirectories: ");
+            Console.WriteLine("");
+            
         }
 
         static void Hulp()
