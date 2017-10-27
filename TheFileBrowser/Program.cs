@@ -16,16 +16,16 @@ namespace TheFileBrowser
                 switch (args[0])
                 {
                     case "-f":
-                        Console.Write("Alle files in de huidige directory: ");
+                        FilesInDirectory();
                         break;
                     case "-c":
-                        Console.Write("De huidige directory: ");
+                        HuidigeDirectory();
                         break;
                     case "-d":
-                        Console.Write("Alle huidige subdirectories: ");
+                        HuidigeSubdirectories();
                         break;
                     case "-h":
-                        Console.WriteLine("Hulp:");
+                        Hulp();
                         break;
                     default:
                         Console.WriteLine("Ongeldig argument! Probeer '-h'");
@@ -35,22 +35,22 @@ namespace TheFileBrowser
         }
         static void FilesInDirectory()
         {
-
+            Console.Write("Alle files in de huidige directory: ");
         }
 
         static void HuidigeDirectory()
         {
-
+            Console.Write("De huidige directory: ");
         }
 
         static void HuidigeSubdirectories()
         {
-
+            Console.Write("Alle huidige subdirectories: ");
         }
 
         static void Hulp()
         {
-
+            Console.WriteLine("Hulp:");
         }
     }
 
