@@ -42,7 +42,6 @@ namespace TheFileBrowser
         static void FilesInDirectory()
         {
             Console.WriteLine("Alle files in de huidige directory: ");
-            Console.WriteLine("");
             string[] dirs = Directory.GetFiles(Environment.CurrentDirectory);
             foreach (string dir in dirs)
             {
@@ -57,9 +56,12 @@ namespace TheFileBrowser
 
         static void HuidigeSubdirectories()
         {
-            Console.Write("Alle huidige subdirectories: ");
-            Console.WriteLine("");
-            
+            Console.WriteLine("Alle huidige subdirectories: ");
+            string[] folders = Directory.GetDirectories(Environment.CurrentDirectory);
+            foreach (string dirs in folders)
+            {
+                Console.WriteLine(dirs);
+            }
         }
 
         static void Hulp()
