@@ -8,9 +8,12 @@ namespace TheFileBrowser
 {
     class Program
     {
-        
         static void Main(string[] args)
         {
+            Console.ForegroundColor = ConsoleColor.Black;
+            Console.BackgroundColor = ConsoleColor.White;
+            Console.Clear();
+
             if (args.Length == 0)
             {
                 Console.WriteLine("Geef een argument! Probeer '-h'");
@@ -63,7 +66,7 @@ namespace TheFileBrowser
                 Console.WriteLine(dirs);
             }
         }
-
+        
         static void Hulp()
         {
             Console.WriteLine("Hulp:");
@@ -73,6 +76,7 @@ namespace TheFileBrowser
             Console.WriteLine("-d toont alle subdirectories van de huidige directory.");
             Console.WriteLine("-h toont alle mogelijke arguments.");
         }
+        
     }
 
 }
